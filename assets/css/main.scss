@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline-style: none;
+}
+
+@font-face {
+  font-family: 'OpenSans-Medium';
+  src: url(../fonts/Open_Sans/static/OpenSans/OpenSans-Medium.ttf);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'OpenSans-Medium', sans-serif;
+}
