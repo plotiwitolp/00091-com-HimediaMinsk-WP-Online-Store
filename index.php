@@ -37,21 +37,30 @@
                 </div>
                 <div class="header-top__phone">
                     <div class="header-top__tel">
-                        <img src="./assets/img/call-calling.svg" alt="">
+                        <a href="tel:+73104372766">
+                            <img src="./assets/img/call-calling.svg" alt="">
+                        </a>
                     </div>
                     <div class="header-top__quest-num">
                         <span class="header-top__quest">Появились вопросы?</span>
-                        <span class="header-top__num">310-437-2766</span>
+                        <span class="header-top__num">
+                            <a href="tel:+73104372766">
+                                310-437-2766
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
+        </section>
+        <span class="underline-dark-mark"></span>
+        <section>
             <div class="header-bottom">
                 <div class="navigation">
                     <div class="navigation__catalog">
                         <!-- открывать/скрывать navigation__cat-nav -->
                         <a href="#">
-                            <img src="./assets/img/menu_open_white.svg" class="navigation__btn navigation_active">
-                            <img src="./assets/img/menu_close_white.svg" class="navigation__btn">
+                            <img src="./assets/img/menu_open_white.svg" class="navigation__btn ">
+                            <img src="./assets/img/menu_close_white.svg" class="navigation__btn navigation_active">
                         </a>
                         <!-- на страницу каталог -->
                         <a href="#">
@@ -94,6 +103,7 @@
             </div>
         </section>
     </header>
+
     <main>
         <!-- main-banner -->
         <section>
@@ -108,8 +118,8 @@
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
                         </p>
                         <div class="main-banner-definition__btns">
-                            <a href="#">Каталог</a>
-                            <a href="#">Связаться с нами</a>
+                            <a class="main-banner-definition__cat" href="#">Каталог</a>
+                            <a class="main-banner-definition__call" href="#">Связаться с нами</a>
                         </div>
                     </div>
                     <div class="main-banner-pic">
@@ -125,22 +135,50 @@
                 <div class="products-filter">
                     <span class="products-filter__title">Фильтры</span>
                     <ul class="products-filter-cat">
-                        <li class="products-filter-cat__li">Диаметр</li>
-                        <li class="products-filter-cat__li">Длина</li>
-                        <li class="products-filter-cat__li">Цвет</li>
-                        <li class="products-filter-cat__li">Бренд</li>
-                        <li class="products-filter-cat__li">Упаковка</li>
-                        <li class="products-filter-cat__li">Размер под ключ(мм)</li>
-                        <li class="products-filter-cat__li">Страна производства
+                        <li class="products-filter-cat__li">
+                            <span>Диаметр</span>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span>Длина</span>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span>Цвет</span>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span>Бренд</span>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span>Упаковка</span>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span>Размер под ключ(мм)</span>
+                        </li>
+                        <li class="products-filter-cat__li products-filter-cat__li_active">
+                            <span>Страна производства</span>
                             <ul class="products-filter-sub">
-                                <li class="products-filter-sub__li">Россия</li>
-                                <li class="products-filter-sub__li">Китай</li>
-                                <li class="products-filter-sub__li">Тайвань</li>
-                                <li class="products-filter-sub__li">Вьетнам</li>
-                                <li class="products-filter-sub__li">Индонезия</li>
-                                <li class="products-filter-sub__li">Германия</li>
-                                <li class="products-filter-sub__li">Польша</li>
+                                <li class="products-filter-sub__li">
+                                    <span>Россия</span>
+                                </li>
+                                <li class="products-filter-sub__li products-filter-sub__li_active">
+                                    <span>Китай</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span>Тайвань</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span>Вьетнам</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span>Индонезия</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span>Германия</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span>Польша</span>
+                                </li>
                             </ul>
+
                         </li>
                     </ul>
                     <span class="products-filter__submit">Применить</span>
@@ -149,424 +187,571 @@
                 <div class="products-goods">
                     <div class="products-goods-top">
                         <span class="products-goods-top__title">Популярные товары</span>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
+                        <div class="products-goods-cart-wrap">
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена:</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
-                                </div>
-                            </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
+                                </div>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
+                                </div>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
+                                </div>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
+                                </div>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="products-goods-catalog">
                         <span class="products-goods-catalog__title">Каталог товаров</span>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
+                        <div class="products-goods-cart-wrap">
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
-                                </div>
-                            </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
-                                </div>
-                            </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
-                                </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
-                            </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
-                            </div>
-                        </div>
-                        <div class="products-goods-cart">
-                            <div class="products-goods-cart__img-wrap">
-                                <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
-                            </div>
-                            <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
-                            <div class="products-goods-cart__rank">
-                                <span class="products-goods-cart__stars">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                    <img src="./assets/img/star-full.png" alt="">
-                                </span>
-                                <span class="products-goods-cart__count-reviews">(67)</span>
-                            </div>
-                            <div class="products-goods-cart__parameters">
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Бренд</span>
-                                    <span class="products-goods-cart__parameter-body">KENNER</span>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Покрытие</span>
-                                    <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Головка</span>
-                                    <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
-                                    <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
                                 </div>
-                                <div class="products-goods-cart__parameter-item">
-                                    <span class="products-goods-cart__parameter-title">Наконечник</span>
-                                    <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
-                            <div class="products-goods-cart__cost">
-                                <span class="products-goods-cart__cost-title">Цена</span>
-                                <span class="products-goods-cart__cost-count">469.46</span>
-                                <span class="products-goods-cart__cost-currency ">₽</span>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
+                                </div>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
+                                </div>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
+                                </div>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
+                                </div>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
+                                </div>
                             </div>
-                            <div class="products-goods-cart__btns">
-                                <span class="products-goods-cart__buy">Купить</span>
-                                <span class="products-goods-cart__basket">
-                                    <img src="./assets/img/bag_dark.svg" alt="">
-                                </span>
-                                <span class="products-goods-cart__heart">
-                                    <img src="./assets/img/heart_dark.svg" alt="">
-                                </span>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
+                                </div>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
+                                </div>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
+                                </div>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
+                                </div>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
+                                </div>
                             </div>
+                            <div class="products-goods-cart">
+                                <div class="products-goods-cart__img-wrap">
+                                    <img class="products-goods-cart__img" src="./assets/img/fastener_store/GM_07350 копия.JPG" alt="">
+                                </div>
+                                <h3 class="products-goods-cart__title">Саморезы кровельные RAL по металлу</h3>
+                                <div class="products-goods-cart__rank">
+                                    <div class="products-goods-cart__stars">
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                        <span>
+                                            <img src="./assets/img/star-full.png" alt="">
+                                        </span>
+                                    </div>
+                                    <span class="products-goods-cart__count-reviews">(67)</span>
+                                </div>
+                                <div class="products-goods-cart__parameters">
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Бренд</span>
+                                        <span class="products-goods-cart__parameter-body">KENNER</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Покрытие</span>
+                                        <span class="products-goods-cart__parameter-body">Окрашенные RAL</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Головка</span>
+                                        <span class="products-goods-cart__parameter-body">Шестигранная (8мм)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Шаг резьбы</span>
+                                        <span class="products-goods-cart__parameter-body">Мелкий (по металлу)</span>
+                                    </div>
+                                    <div class="products-goods-cart__parameter-item">
+                                        <span class="products-goods-cart__parameter-title">Наконечник</span>
+                                        <span class="products-goods-cart__parameter-body">Со сверлом (РТ-3)</span>
+                                    </div>
+                                </div>
+                                <div class="products-goods-cart__cost">
+                                    <span class="products-goods-cart__cost-title">Цена</span>
+                                    <span class="products-goods-cart__cost-count">469.46</span>
+                                    <span class="products-goods-cart__cost-currency ">₽</span>
+                                </div>
+                                <div class="products-goods-cart__btns">
+                                    <span class="products-goods-cart__buy">Купить</span>
+                                    <span class="products-goods-cart__basket">
+                                        <img src="./assets/img/bag_dark.svg" alt="">
+                                    </span>
+                                    <span class="products-goods-cart__heart">
+                                        <img src="./assets/img/heart_dark.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="products-goods-catalog__show-more">
                             <span>Загрузить еще</span>

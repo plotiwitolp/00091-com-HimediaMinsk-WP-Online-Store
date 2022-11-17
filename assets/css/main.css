@@ -8,9 +8,41 @@
   outline-style: none;
 }
 
+input {
+  border: none;
+}
+
+a {
+  color: inherit;
+}
+
 @font-face {
-  font-family: "OpenSans-Medium";
-  src: url(../fonts/Open_Sans/static/OpenSans/OpenSans-Medium.ttf);
+  font-family: "Inter_Regular400";
+  src: url(../fonts/Inter/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter_SemiBold600";
+  src: url(../fonts/Inter/static/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Inter_Bold700";
+  src: url(../fonts/Inter/static/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: "TTNorms_Light300";
+  src: url(../fonts/TT_Norms/TTNorms-Light.otf);
+}
+@font-face {
+  font-family: "TTNorms_Regular400";
+  src: url(../fonts/TT_Norms/TTNorms-Regular.otf);
+}
+@font-face {
+  font-family: "TTNorms_Medium500";
+  src: url(../fonts/TT_Norms/TTNorms-Medium.otf);
+}
+@font-face {
+  font-family: "TTNorms_Bold700";
+  src: url(../fonts/TT_Norms/TTNorms-Bold.otf);
 }
 html,
 body {
@@ -18,5 +50,703 @@ body {
 }
 
 body {
-  font-family: "OpenSans-Medium", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 32px;
+}
+
+footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+section {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #27282b;
+  color: #8c8c8c;
+  font-family: "TTNorms_Regular400";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.header-top__search {
+  width: 617px;
+  height: 48px;
+  margin-left: 40px;
+}
+.header-top__search form#search {
+  height: 100%;
+}
+.header-top__search form#search input {
+  height: 100%;
+  width: 100%;
+  padding: 17px 23px 18px;
+  border-radius: 10px;
+  background-color: #343538;
+  color: #fff;
+  font-size: 14px;
+}
+.header-top__search form#search input::-webkit-input-placeholder {
+  background-image: url(../img/search-normal.svg);
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+.header-top__search form#search input::-moz-placeholder {
+  background-image: url(../img/search-normal.svg);
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+.header-top__search form#search input:-ms-input-placeholder {
+  background-image: url(../img/search-normal.svg);
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+.header-top__search form#search input::-ms-input-placeholder {
+  background-image: url(../img/search-normal.svg);
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+.header-top__search form#search input::placeholder {
+  background-image: url(../img/search-normal.svg);
+  background-repeat: no-repeat;
+  text-indent: 25px;
+}
+
+.header-top__socials {
+  width: 130px;
+  margin-left: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-top__phone {
+  margin-left: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-top__tel {
+  width: 25px;
+}
+
+.header-top__quest-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 16px;
+}
+
+.header-top__quest {
+  font-size: 12px;
+}
+
+.header-top__num {
+  color: #fff;
+  font-size: 14px;
+}
+
+.header-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0;
+}
+
+.underline-dark-mark {
+  border-top: 1px solid #363636;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation__catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation__catalog a:nth-child(2) {
+  margin-left: 14px;
+  color: #fff;
+  font-family: "TTNorms_Medium500";
+}
+
+.navigation__btn {
+  display: none;
+}
+
+.navigation_active {
+  display: block;
+}
+
+.navigation__cat-nav {
+  display: none;
+}
+
+.navigation__main-menu {
+  margin-left: 40px;
+}
+.navigation__main-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation__main-menu ul li {
+  margin-right: 40px;
+}
+
+.basket-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 50px;
+}
+.basket-btns div {
+  margin-left: 8px;
+}
+
+.main-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-banner__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-banner-definition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 620px;
+}
+
+.main-banner-definition__h1 {
+  font-family: "Inter_Bold700";
+  font-size: 52px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.main-banner-definition__h1 .underline-mark {
+  width: 484px;
+}
+
+.underline-mark {
+  position: absolute;
+  background: #feed01;
+  bottom: 12px;
+  left: 0;
+  height: 5px;
+  z-index: -1;
+}
+
+.main-banner-definition__desc {
+  font-family: "Inter_Regular400";
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.main-banner-definition__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "TTNorms_Medium500";
+  font-size: 14px;
+}
+.main-banner-definition__btns a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  width: 204px;
+  height: 41px;
+}
+
+.main-banner-definition__cat {
+  background: #e31e25;
+  color: #fff;
+}
+
+.main-banner-definition__call {
+  border: 1px solid #1b2430;
+  margin-left: 15px;
+}
+
+.main-banner-pic {
+  margin-left: -30px;
+}
+
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 240px;
+  font-family: "Inter_SemiBold600";
+  font-size: 12px;
+  background: #f6f8f9;
+  border-radius: 10px;
+  height: 100%;
+  border-radius: 10px;
+  padding: 32px 16px 42px;
+}
+
+.products-filter__title {
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 16px;
+  color: #e31e25;
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+.products-filter-cat {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.products-filter-cat__li {
+  margin-bottom: 8px;
+  position: relative;
+}
+.products-filter-cat__li span {
+  padding-left: 24px;
+  padding-right: 10px;
+  border-radius: 6px;
+  line-height: 24px;
+  display: block;
+}
+.products-filter-cat__li span::before {
+  content: "";
+  background-image: url(../img/Chevron_right.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 4px;
+  top: 8px;
+}
+
+.products-filter-cat__li_active > span {
+  background: #eef0f2;
+}
+.products-filter-cat__li_active span::before {
+  background-image: url(../img/Chevron_down.svg);
+}
+
+.products-filter-sub {
+  font-family: "Inter_Regular400";
+}
+
+.products-filter-sub__li {
+  margin-bottom: 8px;
+}
+.products-filter-sub__li span {
+  padding-left: 44px;
+  line-height: 24px;
+}
+
+.products-filter-sub__li_active > span {
+  background: #eef0f2;
+}
+
+.products-filter__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 204px;
+  height: 41px;
+  background: #1b2430;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.products-filter__reset {
+  text-align: center;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.products-goods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 12px;
+}
+
+.products-goods-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.products-goods-top__title {
+  font-family: "TTNorms_Bold700";
+  font-size: 22px;
+  line-height: 26px;
+  color: #1b2430;
+  margin-bottom: 20px;
+}
+
+.products-goods-cart-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 992px;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 30px;
+}
+
+.products-goods-cart {
+  width: 296px;
+  padding: 0 12px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #dedede;
+          box-shadow: 0 0 10px #dedede;
+}
+
+.products-goods-cart__img-wrap {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 232px;
+  height: 165px;
+  overflow: hidden;
+  padding: 10px 32px;
+}
+
+.products-goods-cart__img {
+  width: 100%;
+}
+
+.products-goods-cart__title {
+  font-family: "TTNorms_Bold700";
+  font-size: 22px;
+}
+
+.products-goods-cart__rank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products-goods-cart__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.products-goods-cart__stars span {
+  margin-right: 5px;
+}
+
+.products-goods-cart__count-reviews {
+  margin-left: 5px;
+  font-family: "TTNorms_Light300";
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.products-goods-cart__parameters {
+  margin-top: 12px;
+}
+
+.products-goods-cart__parameter-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-goods-cart__parameter-title {
+  width: 125px;
+  font-family: "TTNorms_Regular400";
+  font-size: 15px;
+  color: #333333;
+  opacity: 0.5;
+}
+
+.products-goods-cart__parameter-body {
+  width: 146px;
+  font-family: "TTNorms_Medium500";
+  font-size: 15px;
+  color: #333333;
+}
+
+.products-goods-cart__cost {
+  font-family: "TTNorms_Bold700";
+  font-size: 18px;
+  color: #1b2430;
+  margin-top: 20px;
+}
+
+.products-goods-cart__cost-count {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.products-goods-cart__cost-currency {
+  font-size: 24px;
+  margin-left: 3px;
+}
+
+.products-goods-cart__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.products-goods-cart__buy {
+  font-family: "TTNorms_Medium500";
+  font-size: 17px;
+  width: 151px;
+  height: 50px;
+  background: #1b2430;
+  color: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.products-goods-cart__basket {
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.products-goods-cart__heart {
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.products-goods-catalog {
+  margin-top: 50px;
+}
+
+.products-goods-catalog__title {
+  display: block;
+  font-family: "TTNorms_Bold700";
+  font-size: 22px;
+  color: #1b2430;
+  margin-bottom: 20px;
+}
+
+.products-goods-catalog__show-more {
+  width: 343px;
+  height: 48px;
+  background: #f9f5ff;
+  border: 1px solid #f9f5ff;
+  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-family: "TTNorms_Medium500";
+  font-size: 16px;
+  color: #6941c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+  cursor: pointer;
+}
+.products-goods-catalog__show-more span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.products-goods-catalog__show-more span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/arrow-down.svg);
+  background-size: cover;
+  margin-right: 7px;
+}
+
+.about-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 52px;
+}
+
+.about-company-desc {
+  padding-top: 51px;
+}
+
+.about-company-desc__h2 {
+  font-family: "TTNorms_Bold700";
+  margin-bottom: 32px;
+  font-size: 48px;
+  color: #1b2430;
+  position: relative;
+}
+.about-company-desc__h2 .underline-mark {
+  width: 275px;
+}
+
+.about-company-desc__p {
+  width: 595px;
+  font-family: "TTNorms_Regular400";
+  font-size: 22px;
+  color: #495059;
+}
+
+.about-company-desc__btn {
+  font-family: "TTNorms_Medium500";
+  font-size: 17px;
+  margin-top: 50px;
+  width: 186px;
+  height: 49px;
+  background: #1b2430;
+  border-radius: 5px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.about-company-banner {
+  position: relative;
+}
+
+.about-company-banner__shadow {
+  position: absolute;
+  width: 604px;
+  height: 476px;
+  background: #1b2430;
+  border-radius: 10px;
+  left: 100px;
+  top: 51px;
+  z-index: -1;
 }
