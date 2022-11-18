@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лидер крепёж</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -15,7 +16,7 @@
         <section>
             <div class="header-top">
                 <div class="header-top__logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="./assets/img/Logo_2_1.png" alt="Лидер крепёж">
                     </a>
                 </div>
@@ -58,7 +59,7 @@
                 <div class="navigation">
                     <div class="navigation__catalog">
                         <!-- открывать/скрывать navigation__cat-nav -->
-                        <a href="#">
+                        <a class="navigation__catalog-btn" href="javascript: void(0)">
                             <img src="./assets/img/menu_open_white.svg" class="navigation__btn ">
                             <img src="./assets/img/menu_close_white.svg" class="navigation__btn navigation_active">
                         </a>
@@ -136,46 +137,184 @@
                     <span class="products-filter__title">Фильтры</span>
                     <ul class="products-filter-cat">
                         <li class="products-filter-cat__li">
-                            <span>Диаметр</span>
-                        </li>
-                        <li class="products-filter-cat__li">
-                            <span>Длина</span>
-                        </li>
-                        <li class="products-filter-cat__li">
-                            <span>Цвет</span>
-                        </li>
-                        <li class="products-filter-cat__li">
-                            <span>Бренд</span>
-                        </li>
-                        <li class="products-filter-cat__li">
-                            <span>Упаковка</span>
-                        </li>
-                        <li class="products-filter-cat__li">
-                            <span>Размер под ключ(мм)</span>
-                        </li>
-                        <li class="products-filter-cat__li products-filter-cat__li_active">
-                            <span>Страна производства</span>
+                            <span class="products-filter-cat__span">Диаметр</span>
                             <ul class="products-filter-sub">
                                 <li class="products-filter-sub__li">
-                                    <span>Россия</span>
-                                </li>
-                                <li class="products-filter-sub__li products-filter-sub__li_active">
-                                    <span>Китай</span>
+                                    <span class="products-filter-sub__span">пример 1</span>
                                 </li>
                                 <li class="products-filter-sub__li">
-                                    <span>Тайвань</span>
+                                    <span class="products-filter-sub__span">пример 3</span>
                                 </li>
                                 <li class="products-filter-sub__li">
-                                    <span>Вьетнам</span>
+                                    <span class="products-filter-sub__span">пример 4</span>
                                 </li>
                                 <li class="products-filter-sub__li">
-                                    <span>Индонезия</span>
+                                    <span class="products-filter-sub__span">пример 5</span>
                                 </li>
                                 <li class="products-filter-sub__li">
-                                    <span>Германия</span>
+                                    <span class="products-filter-sub__span">пример 6</span>
                                 </li>
                                 <li class="products-filter-sub__li">
-                                    <span>Польша</span>
+                                    <span class="products-filter-sub__span">пример 7</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 8</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span class="products-filter-cat__span">Длина</span>
+                            <ul class="products-filter-sub">
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 1</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 3</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 4</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 5</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 6</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 7</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 8</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span class="products-filter-cat__span">Цвет</span>
+                            <ul class="products-filter-sub">
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 1</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 3</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 4</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 5</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 6</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 7</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 8</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span class="products-filter-cat__span">Бренд</span>
+                            <ul class="products-filter-sub">
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 1</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 3</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 4</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 5</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 6</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 7</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 8</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span class="products-filter-cat__span">Упаковка</span>
+                            <ul class="products-filter-sub">
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 1</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 3</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 4</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 5</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 6</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 7</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 8</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span class="products-filter-cat__span">Размер под ключ(мм)</span>
+                            <ul class="products-filter-sub">
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 1</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 3</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 4</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 5</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 6</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 7</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__span">пример 8</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="products-filter-cat__li">
+                            <span class="products-filter-cat__span">Страна производства</span>
+                            <ul class="products-filter-sub">
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Россия</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Китай</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Тайвань</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Вьетнам</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Индонезия</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Германия</span>
+                                </li>
+                                <li class="products-filter-sub__li">
+                                    <span class="products-filter-sub__li">Польша</span>
                                 </li>
                             </ul>
 
@@ -754,7 +893,7 @@
 
                         </div>
                         <div class="products-goods-catalog__show-more">
-                            <span>Загрузить еще</span>
+                            <span class="products-goods-catalog__show-more-span">Загрузить еще</span>
                         </div>
                     </div>
                 </div>
@@ -808,7 +947,7 @@
         </div>
 
         <!-- our-clients -->
-        <section>
+        <section class="our-clients-wrap">
             <div class="our-clients">
                 <h2 class="our-clients__title">
                     <span>Наши клиенты</span>
@@ -858,17 +997,10 @@
                         </div>
                     </div>
                     <div class="our-clients-slider__remote">
-                        <span class="our-clients-slider__prev">
-                            <img src="./assets/img/bi_arrow-down_prev.svg" alt="">
-                        </span>
-                        <span class="our-clients-slider__next">
-                            <img src="./assets/img/bi_arrow-down_next.svg" alt="">
-                        </span>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <!-- our-contacts -->
         <section>
@@ -915,7 +1047,6 @@
         </section>
     </main>
 
-    <!-- footer -->
     <footer class="footer">
         <section>
             <div class="footer-top">
@@ -996,6 +1127,8 @@
         </section>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 

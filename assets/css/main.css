@@ -5,7 +5,7 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
-  outline-style: none;
+  outline: none;
 }
 
 input {
@@ -77,6 +77,12 @@ section {
   margin: 0 auto;
 }
 
+.our-clients-wrap {
+  width: 1540px;
+  padding: 0 150px;
+  overflow: hidden;
+}
+
 .header {
   background-color: #27282b;
   color: #8c8c8c;
@@ -88,6 +94,16 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100wh;
+  z-index: 999;
+}
+
+main {
+  padding-top: 151px;
 }
 
 .header-top {
@@ -207,12 +223,24 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .navigation__catalog {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.navigation__catalog a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.navigation__catalog a:hover {
+  color: #8c8c8c !important;
 }
 .navigation__catalog a:nth-child(2) {
   margin-left: 14px;
@@ -230,6 +258,34 @@ section {
 
 .navigation__cat-nav {
   display: none;
+  position: absolute;
+  top: 30px;
+  left: -5px;
+  width: 224px;
+  color: #252c32;
+  font-family: "Inter_SemiBold600";
+  font-size: 12px;
+  line-height: 24px;
+  padding: 25px 18px 33px 20px;
+  background: #f6f8f9;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.navigation__cat-nav ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+.navigation__cat-nav ul li:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/Chevron_right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 8px);
 }
 
 .navigation__main-menu {
@@ -243,6 +299,13 @@ section {
 .navigation__main-menu ul li {
   margin-right: 40px;
 }
+.navigation__main-menu ul li a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.navigation__main-menu ul li a:hover {
+  color: #fff;
+}
 
 .basket-btns {
   display: -webkit-box;
@@ -252,6 +315,15 @@ section {
 }
 .basket-btns div {
   margin-left: 8px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.basket-btns div:hover {
+  -webkit-box-shadow: 0 0 7px rgba(255, 255, 255, 0.3098039216);
+          box-shadow: 0 0 7px rgba(255, 255, 255, 0.3098039216);
 }
 
 .basket-btns__bag {
@@ -375,6 +447,12 @@ section {
   height: 100%;
   border-radius: 10px;
   padding: 32px 16px 42px;
+  position: sticky;
+  top: 155px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .products-filter__title {
@@ -401,7 +479,9 @@ section {
   padding-right: 10px;
   border-radius: 6px;
   line-height: 24px;
+  margin-bottom: 8px;
   display: block;
+  cursor: pointer;
 }
 .products-filter-cat__li span::before {
   content: "";
@@ -411,17 +491,24 @@ section {
   height: 20px;
   position: absolute;
   left: 4px;
-  top: 8px;
+  top: 4px;
 }
 
-.products-filter-cat__li_active > span {
-  background: #eef0f2;
+.products-filter-cat__li .products-filter-cat__li_active {
+  background: #dbdddf;
 }
-.products-filter-cat__li_active span::before {
+.products-filter-cat__li .products-filter-cat__li_active::before {
   background-image: url(../img/Chevron_down.svg);
+  z-index: 1;
+  background-color: #dbdddf;
+}
+
+.products-filter-sub__li_active {
+  background: #dbdddf;
 }
 
 .products-filter-sub {
+  display: none;
   font-family: "Inter_Regular400";
 }
 
@@ -431,10 +518,6 @@ section {
 .products-filter-sub__li span {
   padding-left: 44px;
   line-height: 24px;
-}
-
-.products-filter-sub__li_active > span {
-  background: #eef0f2;
 }
 
 .products-filter__submit {
@@ -452,12 +535,14 @@ section {
   background: #1b2430;
   border-radius: 5px;
   color: #fff;
+  cursor: pointer;
 }
 
 .products-filter__reset {
   text-align: center;
   padding: 10px;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .products-goods {
@@ -879,18 +964,22 @@ section {
           flex-direction: column;
 }
 
-.our-clients-slider__track {
+.our-clients-slider__track,
+.slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  padding: 50px 0 50px 25px;
-  overflow: hidden;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  padding: 30px 0 30px 25px;
 }
 
-.our-clients-slider__item {
+.slick-list {
+  overflow: visible;
+}
+
+.our-clients-slider .our-clients-slider__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1309,4 +1398,10 @@ section {
   font-family: "TTNorms_Light300";
   font-size: 14px;
   line-height: 17px;
+}
+
+@media (max-width: 1540px) {
+  .our-clients-wrap {
+    width: 1140px;
+  }
 }

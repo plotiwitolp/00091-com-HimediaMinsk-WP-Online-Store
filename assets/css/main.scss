@@ -4,7 +4,7 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
-  outline-style: none;
+  outline: none;
 }
 input {
   border: none;
@@ -67,10 +67,16 @@ $clr_dark: #27282b;
 $clr_dark_light: #343538;
 $clr_light: #fff;
 $clr_light_dark: #8c8c8c;
+$trns: 0.2s;
 
 section {
   width: 1240px;
   margin: 0 auto;
+}
+.our-clients-wrap {
+  width: 1540px;
+  padding: 0 150px;
+  overflow: hidden;
 }
 .header {
   background-color: $clr_dark;
@@ -78,8 +84,15 @@ section {
   font-family: 'TTNorms_Regular400';
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100wh;
+  z-index: 999;
 }
 main {
+  padding-top: 151px;
 }
 .header-top {
   display: flex;
@@ -147,8 +160,16 @@ main {
 }
 .navigation {
   display: flex;
+  user-select: none;
 }
 .navigation__catalog {
+  position: relative;
+  & a {
+    transition: $trns;
+  }
+  & a:hover {
+    color: #8c8c8c !important;
+  }
   display: flex;
   a:nth-child(2) {
     margin-left: 14px;
@@ -164,6 +185,35 @@ main {
 }
 .navigation__cat-nav {
   display: none;
+  position: absolute;
+  top: 30px;
+  left: -5px;
+  width: 224px;
+  color: #252c32;
+  font-family: 'Inter_SemiBold600';
+  font-size: 12px;
+  line-height: 24px;
+  padding: 25px 18px 33px 20px;
+  background: #f6f8f9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  ul {
+    li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    li:after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-image: url(../img/Chevron_right.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 0px;
+      top: calc(50% - 8px);
+    }
+  }
 }
 .navigation__main-menu {
   margin-left: 40px;
@@ -171,6 +221,12 @@ main {
     display: flex;
     li {
       margin-right: 40px;
+      a {
+        transition: $trns;
+      }
+      a:hover {
+        color: #fff;
+      }
     }
   }
 }
@@ -179,6 +235,13 @@ main {
   margin-right: 50px;
   div {
     margin-left: 8px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    transition: $trns;
+    &:hover {
+      box-shadow: 0 0 7px #ffffff4f;
+    }
   }
 }
 .basket-btns__bag {
@@ -262,6 +325,9 @@ main {
   height: 100%;
   border-radius: 10px;
   padding: 32px 16px 42px;
+  position: sticky;
+  top: 155px;
+  user-select: none;
 }
 .products-filter__title {
   display: inline-block;
@@ -284,7 +350,9 @@ main {
     padding-right: 10px;
     border-radius: 6px;
     line-height: 24px;
+    margin-bottom: 8px;
     display: block;
+    cursor: pointer;
   }
   & span::before {
     content: '';
@@ -294,19 +362,23 @@ main {
     height: 20px;
     position: absolute;
     left: 4px;
-    top: 8px;
+    top: 4px;
   }
 }
-.products-filter-cat__li_active {
-  & > span {
-    background: #eef0f2;
-  }
-  & span::before {
+.products-filter-cat__li .products-filter-cat__li_active {
+  background: #dbdddf;
+  &::before {
     background-image: url(../img/Chevron_down.svg);
+    z-index: 1;
+    background-color: #dbdddf;
   }
+}
+.products-filter-sub__li_active {
+  background: #dbdddf;
 }
 
 .products-filter-sub {
+  display: none;
   font-family: 'Inter_Regular400';
 }
 .products-filter-sub__li {
@@ -316,11 +388,7 @@ main {
     line-height: 24px;
   }
 }
-.products-filter-sub__li_active {
-  & > span {
-    background: #eef0f2;
-  }
-}
+
 .products-filter__submit {
   display: flex;
   align-items: center;
@@ -330,11 +398,13 @@ main {
   background: #1b2430;
   border-radius: 5px;
   color: $clr_light;
+  cursor: pointer;
 }
 .products-filter__reset {
   text-align: center;
   padding: 10px;
   text-decoration: underline;
+  cursor: pointer;
 }
 .products-goods {
   display: flex;
@@ -628,13 +698,16 @@ main {
   display: flex;
   flex-direction: column;
 }
-.our-clients-slider__track {
+.our-clients-slider__track,
+.slick-track {
   display: flex;
-  column-gap: 30px;
-  padding: 50px 0 50px 25px;
-  overflow: hidden;
+  column-gap: 40px;
+  padding: 30px 0 30px 25px;
 }
-.our-clients-slider__item {
+.slick-list {
+  overflow: visible;
+}
+.our-clients-slider .our-clients-slider__item {
   display: flex;
   width: 370px;
   padding: 24px;
@@ -922,3 +995,26 @@ main {
   font-size: 14px;
   line-height: 17px;
 }
+// mobile styles (992px)
+@media (max-width: 1540px) {
+  .our-clients-wrap {
+    width: 1140px;
+  }
+}
+
+// mobile styles (370px)
+// @media (max-width: 992px) {
+//   body {
+//     background-color: red;
+//   }
+//   section {
+//     width: 370px;
+//   }
+//   .header {
+//     flex-direction: column;
+//   }
+//   main,
+//   footer {
+//     display: none;
+//   }
+// }
