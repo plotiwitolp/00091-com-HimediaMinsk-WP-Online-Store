@@ -102,8 +102,8 @@ $(document).ready(function () {
       slidesToScroll: 1,
       variableWidth: true,
       infinite: true,
-      prevArrow: `<span class="our-clients-slider__prev"><img src="./assets/img/bi_arrow-down_prev.svg" alt=""></span>`,
-      nextArrow: `<span class="our-clients-slider__next"><img src="./assets/img/bi_arrow-down_next.svg" alt=""></span>`,
+      prevArrow: `<span class="our-clients-slider__prev"></span>`,
+      nextArrow: `<span class="our-clients-slider__next"></span>`,
     });
     $('.our-clients-slider__prev').appendTo($('.our-clients-slider__remote'));
     $('.our-clients-slider__next').appendTo($('.our-clients-slider__remote'));

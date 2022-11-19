@@ -73,6 +73,9 @@ $clr_light: #fff;
 $clr_light_dark: #8c8c8c;
 $trns: 0.2s;
 
+.customize-support .header {
+  top: 32px;
+}
 section {
   width: 1240px;
   margin: 0 auto;
@@ -759,13 +762,25 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  &::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+  }
 }
 .our-clients-slider__prev {
   background: #d9d9d9;
   margin-right: 10px;
+  &::before {
+    background-image: url(../img/bi_arrow-down_prev.svg);
+  }
 }
 .our-clients-slider__next {
   background: #1b2430;
+  &::before {
+    background-image: url(../img/bi_arrow-down_next.svg);
+  }
 }
 .our-contacts {
   padding-top: 40px;
