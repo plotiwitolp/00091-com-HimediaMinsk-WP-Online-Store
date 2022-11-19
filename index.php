@@ -54,7 +54,7 @@
             </div>
         </section>
         <span class="underline-dark-mark"></span>
-        <section>
+        <section class="header-nav">
             <div class="header-bottom">
                 <div class="navigation">
                     <div class="navigation__catalog">

@@ -101,7 +101,7 @@ $(document).ready(function () {
       slidesToShow: 3,
       slidesToScroll: 1,
       variableWidth: true,
-      infinite: false,
+      infinite: true,
       prevArrow: `<span class="our-clients-slider__prev"><img src="./assets/img/bi_arrow-down_prev.svg" alt=""></span>`,
       nextArrow: `<span class="our-clients-slider__next"><img src="./assets/img/bi_arrow-down_next.svg" alt=""></span>`,
     });
