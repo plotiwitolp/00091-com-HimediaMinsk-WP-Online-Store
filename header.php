@@ -63,30 +63,21 @@
                             <img src="<?php bloginfo('template_url') ?>/assets/img/menu_close_white.svg" class="navigation__btn navigation_active">
                         </a>
                         <!-- на страницу каталог -->
-                        <a href="#">
+                        <a href="http://00091-com-himediaminsk-wp-online-store/shop/">
                             <span>Весь каталог</span>
                         </a>
                         <div class="navigation__cat-nav">
-                            <ul>
-                                <li><a href="#">Саморезы - шурупы</a></li>
-                                <li><a href="#">Анкеры</a></li>
-                                <li><a href="#">Кровельные саморезы</a></li>
-                                <li><a href="#">Заклёпки</a></li>
-                                <li><a href="#">Метрический крепёж</a></li>
-                                <li><a href="#">Такелаж</a></li>
-                                <li><a href="#">Дюбельная техника</a></li>
-                                <li><a href="#">Гвозди и скобы</a></li>
-                                <li><a href="#">Крепёж KENNER</a></li>
-                                <li><a href="#">Химический крепёж</a></li>
-                            </ul>
+                            <?php wp_nav_menu([
+                                'theme_location'  => 'top_1',
+                            ]);
+                            ?>
                         </div>
                     </div>
                     <div class="navigation__main-menu">
-                        <ul>
-                            <li><a href="#">Доставка</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">О компании</a></li>
-                        </ul>
+                        <?php wp_nav_menu([
+                            'theme_location'  => 'top_2',
+                        ]);
+                        ?>
                     </div>
                 </div>
                 <div class="basket-btns">

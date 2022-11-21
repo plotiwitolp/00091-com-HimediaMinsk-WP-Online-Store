@@ -45,12 +45,10 @@
         <div class="footer-bottom">
             <div class="footer-bottom-left">
                 <div class="footer-bottom-menu">
-                    <ul>
-                        <li><a href="">Каталог</a></li>
-                        <li><a href="">Доставка</a></li>
-                        <li><a href="">О компании</a></li>
-                        <li><a href="">Контакты</a></li>
-                    </ul>
+                    <?php wp_nav_menu([
+                        'theme_location'  => 'bottom',
+                    ]);
+                    ?>
                 </div>
                 <div class="footer-bottom-social">
                     <span class="footer-bottom-social__item">

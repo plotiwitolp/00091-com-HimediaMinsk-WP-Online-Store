@@ -77,12 +77,22 @@ footer {
           flex: 0 0 auto;
 }
 
+h1 {
+  margin: 15px 0;
+  font-family: "TTNorms_Regular400";
+  color: #27282b;
+}
+
 .customize-support .header {
   top: 32px;
 }
 
 section,
 h2 {
+  font-family: "TTNorms_Regular400";
+}
+
+form {
   font-family: "TTNorms_Regular400";
 }
 
@@ -578,7 +588,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 12px;
 }
 
 .products-goods-top {
@@ -836,6 +845,7 @@ main {
   font-family: "TTNorms_Regular400";
   font-size: 22px;
   color: #495059;
+  margin-bottom: 15px;
 }
 
 .about-company-desc__btn {
@@ -861,6 +871,10 @@ main {
 
 .about-company-banner {
   position: relative;
+}
+.about-company-banner img {
+  border-radius: 10px;
+  width: 100%;
 }
 
 .about-company-banner__shadow {
@@ -1078,27 +1092,14 @@ main {
           align-items: center;
   cursor: pointer;
 }
-.our-clients-slider__prev::before,
-.our-clients-slider__next::before {
-  content: "";
-  width: 25px;
-  height: 25px;
-  background-repeat: no-repeat;
-}
 
 .our-clients-slider__prev {
   background: #d9d9d9;
   margin-right: 10px;
 }
-.our-clients-slider__prev::before {
-  background-image: url(../img/bi_arrow-down_prev.svg);
-}
 
 .our-clients-slider__next {
   background: #1b2430;
-}
-.our-clients-slider__next::before {
-  background-image: url(../img/bi_arrow-down_next.svg);
 }
 
 .our-contacts {
@@ -1438,6 +1439,224 @@ main {
   line-height: 17px;
 }
 
+.about-company-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px 30px;
+  margin-top: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-company-gallery__item {
+  width: calc(33.3333333333% - 60px);
+}
+
+.about-company-gallery__item img {
+  width: 100%;
+}
+
+.form-mail-to-us form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 355px;
+  margin-bottom: 20px;
+}
+.form-mail-to-us form label {
+  font-size: 14px;
+  margin-right: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.form-mail-to-us form input {
+  height: 34px;
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 180px;
+  border-radius: 5px;
+  border: 1px solid #1b2430;
+}
+.form-mail-to-us form input[type=submit] {
+  background: #e31e25;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "TTNorms_Medium500";
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.form-mail-to-us form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-mail-to-us form > div textarea {
+  width: 100%;
+  height: 115px;
+  padding: 10px 20px;
+}
+
+span.form-mail-to-us__title {
+  font-family: "TTNorms_Medium500";
+  margin: 30px 0 15px;
+  display: block;
+}
+
+.form-mail-to-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "TTNorms_Regular400";
+  font-size: 16px;
+}
+
+.contacts-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-info__text {
+  margin-left: 15px;
+}
+
+.contacts-info__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+h2.contacts-info__h2 {
+  margin: 50px 0;
+  font-family: "TTNorms_Bold700";
+  margin-bottom: 32px;
+  font-size: 48px;
+  color: #1b2430;
+  position: relative;
+  padding-top: 51px;
+}
+h2.contacts-info__h2 .underline-mark {
+  width: 360px;
+}
+
+span.contacts-info__desc {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  font-family: "TTNorms_Medium500";
+}
+
+.categoriya-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 35px 20px;
+}
+
+.categoriya-nav ul li {
+  width: calc(33.3333333333% - 50px);
+  min-height: 250px;
+}
+.categoriya-nav ul li a {
+  display: block;
+  color: #fff;
+  height: 100%;
+  font-family: "TTNorms_Bold700";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 10px #dedede;
+          box-shadow: 0 0 10px #dedede;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(39, 40, 43, 0.8), rgba(27, 36, 48, 0.768627451));
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.categoriya-nav ul li a:hover {
+  -webkit-box-shadow: 0 0 15px #111010;
+          box-shadow: 0 0 15px #111010;
+}
+.categoriya-nav ul li a img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.categoriya-nav {
+  margin-bottom: 60px;
+}
+
+.products-filter {
+  margin-right: 12px;
+}
+
+.categoriya__title {
+  font-family: "TTNorms_Bold700";
+  margin-bottom: 32px;
+  font-size: 48px;
+  color: #1b2430;
+  position: relative;
+  padding-top: 51px;
+}
+.categoriya__title .underline-mark {
+  width: 305px;
+}
+
 @media (max-width: 1440px) {
   .header-top {
     -webkit-box-pack: justify;
@@ -1468,6 +1687,9 @@ section:not(.header-nav) {
   .header-top__logo a {
     width: 95px;
     display: block;
+  }
+  .header-top__logo img {
+    width: 100%;
   }
   .header-top__socials {
     margin-left: 15px;
@@ -1524,7 +1746,7 @@ section:not(.header-nav) {
     font-size: 14px;
     margin-bottom: 14px;
   }
-  .our-contacts-info__text {
+  er .our-contacts-info__text {
     margin-bottom: 12px;
   }
   .our-contacts-info__body .underline-mark {
@@ -1872,5 +2094,25 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .categoriya-nav ul li {
+    width: 100%;
+  }
+  .contacts {
+    font-size: 12px;
+  }
+  .categoriya__title,
+h2.contacts-info__h2 {
+    font-size: 22px;
+    padding-top: 12px;
+  }
+  h2.contacts-info__h2 .underline-mark {
+    width: 168px;
+  }
+  h2.contacts-info__h2 {
+    margin: 12px 0;
+  }
+  .categoriya__title .underline-mark {
+    width: 207px;
   }
 }
