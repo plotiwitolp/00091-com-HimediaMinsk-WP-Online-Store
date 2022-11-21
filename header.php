@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лидер крепёж</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/assets/css/main.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title><?php bloginfo('name'); ?></title>
+    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <?php wp_site_icon(); ?>
     <?php wp_head(); ?>
 </head>
 
@@ -17,14 +16,13 @@
         <section>
             <div class="header-top">
                 <div class="header-top__logo">
-                    <a href="/">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Logo_2_1.png" alt="Лидер крепёж">
-                    </a>
+                    <?php the_custom_logo(); ?>
                 </div>
                 <div class="header-top__search">
-                    <form id="search" action="">
-                        <input type="text" placeholder="Поиск в каталоге">
-                    </form>
+                    <!-- id="searchform"-->
+                    <?php // get_search_form(); 
+                    ?>
+                    <?php aws_get_search_form(true); ?>
                 </div>
                 <div class="header-top__socials">
                     <a href="#">

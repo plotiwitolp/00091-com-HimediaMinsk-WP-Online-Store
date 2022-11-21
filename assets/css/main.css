@@ -81,6 +81,11 @@ footer {
   top: 32px;
 }
 
+section,
+h2 {
+  font-family: "TTNorms_Regular400";
+}
+
 section {
   width: 1240px;
   margin: 0 auto;
@@ -125,15 +130,24 @@ main {
   padding: 10px 0;
 }
 
+.aws-container .aws-search-form * {
+  border-radius: 10px !important;
+}
+
+.aws-search-result {
+  font-family: "TTNorms_Regular400";
+}
+
 .header-top__search {
   width: 617px;
   height: 48px;
   margin-left: 40px;
 }
-.header-top__search form#search {
+.header-top__search form.aws-search-form {
   height: 100%;
 }
-.header-top__search form#search input {
+.header-top__search form.aws-search-form input,
+.header-top__search form.aws-search-form .aws-search-field:focus {
   height: 100%;
   width: 100%;
   padding: 17px 23px 18px;
@@ -142,28 +156,30 @@ main {
   color: #fff;
   font-size: 14px;
   font-family: "TTNorms_Regular400";
+  border: none;
 }
-.header-top__search form#search input::-webkit-input-placeholder {
+.header-top__search form.aws-search-form input::-webkit-input-placeholder, .header-top__search form.aws-search-form .aws-search-field:focus::-webkit-input-placeholder {
   background-image: url(../img/search-normal.svg);
   background-repeat: no-repeat;
   text-indent: 25px;
 }
-.header-top__search form#search input::-moz-placeholder {
+.header-top__search form.aws-search-form input::-moz-placeholder, .header-top__search form.aws-search-form .aws-search-field:focus::-moz-placeholder {
   background-image: url(../img/search-normal.svg);
   background-repeat: no-repeat;
   text-indent: 25px;
 }
-.header-top__search form#search input:-ms-input-placeholder {
+.header-top__search form.aws-search-form input:-ms-input-placeholder, .header-top__search form.aws-search-form .aws-search-field:focus:-ms-input-placeholder {
   background-image: url(../img/search-normal.svg);
   background-repeat: no-repeat;
   text-indent: 25px;
 }
-.header-top__search form#search input::-ms-input-placeholder {
+.header-top__search form.aws-search-form input::-ms-input-placeholder, .header-top__search form.aws-search-form .aws-search-field:focus::-ms-input-placeholder {
   background-image: url(../img/search-normal.svg);
   background-repeat: no-repeat;
   text-indent: 25px;
 }
-.header-top__search form#search input::placeholder {
+.header-top__search form.aws-search-form input::placeholder,
+.header-top__search form.aws-search-form .aws-search-field:focus::placeholder {
   background-image: url(../img/search-normal.svg);
   background-repeat: no-repeat;
   text-indent: 25px;
@@ -1452,9 +1468,6 @@ section:not(.header-nav) {
   .header-top__logo a {
     width: 95px;
     display: block;
-  }
-  .header-top__logo img {
-    width: 100%;
   }
   .header-top__socials {
     margin-left: 15px;

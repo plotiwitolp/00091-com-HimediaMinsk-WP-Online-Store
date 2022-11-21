@@ -4,7 +4,7 @@
         <div class="footer-top">
             <div class="footer-top-left">
                 <div class="footer-top-left__logo">
-                    <img src="<?php bloginfo('template_url') ?>/assets/img/Logo_2_2.png" alt="">
+                    <?php the_custom_logo(); ?>
                 </div>
                 <span class="footer-top-left__desc">
                     We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.
@@ -79,9 +79,10 @@
     </section>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="<?php bloginfo('template_url') ?>/assets/js/main.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+<!-- <script src="<?php // bloginfo('template_url') 
+                    ?>/assets/js/main.js"></script> -->
 <?php wp_footer(); ?>
 </body>
 
