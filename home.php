@@ -904,7 +904,7 @@ Template Name: Главная страница
 <section>
     <div class="our-contacts">
         <div class="our-contacts-map">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/MAP.svg" alt="">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A858bf867a9fd75df1eadf6406ab518ad30f9de27118daddb6ea4b9181dc588da&amp;width=100%25&amp;height=455&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
         <div class="our-contacts-info">
             <h2 class="our-contacts-info__h2">Наши контакты</h2>
