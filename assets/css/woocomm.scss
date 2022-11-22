@@ -2,3 +2,95 @@
   display: flex;
   flex-wrap: wrap;
 }
+.screen-reader-text {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+  word-wrap: normal !important;
+}
+.star-rating .star-full:before {
+  content: '\f155';
+}
+.star-rating .star-half:before {
+  content: '\f459';
+}
+.star-rating .star-empty:before {
+  content: '\f154';
+}
+.star-rating .star {
+  color: #ffa049;
+  display: inline-block;
+  font-family: dashicons;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: inherit;
+  vertical-align: top;
+  width: 20px;
+}
+.star-rating {
+  display: flex;
+}
+p.woocommerce-result-count {
+  font-size: 14px;
+}
+form.woocommerce-ordering {
+  font-size: 16px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.woocommerce-error,
+.woocommerce-message {
+  background-color: rgba(39, 40, 43, 0.8509803922);
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.woocommerce-error::before,
+.woocommerce-info::before,
+.woocommerce-message::before {
+  top: auto;
+}
+a.button.wc-forward.wp-element-button,
+.restore-item {
+  background-color: #fff;
+  color: #27282b;
+  padding: 10px;
+  border-radius: 10px;
+}
+.products-goods-cart__heart i {
+  display: flex;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+span.feedback {
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+}
+.yith-wcwl-add-button {
+  display: flex;
+}
+a.delete_item {
+  font-size: 0px;
+}
+.woocommerce .products ul::after,
+.woocommerce .products ul::before,
+.woocommerce ul.products::after,
+.woocommerce ul.products::before {
+  display: none;
+}

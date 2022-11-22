@@ -59,46 +59,23 @@ register_nav_menus(array(
     'bottom' => 'Нижнее меню'
 ));
 
-// function get_categories_product($categories_list = '')
-// {
-//     $get_categories_product = get_terms('product_cat', [
-//         'orderby' => 'name',
-//         'order' => 'ASC',
-//         'hide_empty' => 0,
-//         'exclude'       => array(15),
-//     ]);
-//     foreach ($get_categories_product as $categories_item) {
-//         $woo_cat_id = $categories_item->term_id;
-//         $category_thumbnail_id = get_woocommerce_term_meta($woo_cat_id, 'thumbnail_id', true);
-//         $thumbnail_image_url = wp_get_attachment_url($category_thumbnail_id);
-//         $categories_list .= '
-// 				<li>
-// 	<a href="' . esc_url(get_term_link((int)$categories_item->term_id)) . '">' . esc_html($categories_item->name) .
-//             '<img src="' . $thumbnail_image_url . '"/>';
-//         '</a>
-// 				</li>
-// 			';
-//     }
-//     return ($categories_list == '' ? '' : '<ul>' . $categories_list . '</ul>');
-// }
+// подключение woocommerce
+add_theme_support('woocommerce');
 
+// Категории товаров
 function get_categories_product($categories_list = '')
 {
-
     $get_categories_product = get_terms('product_cat', [
         'orderby' => 'name',
         'order' => 'ASC',
         'hide_empty' => 0,
         'exclude'       => array(15),
     ]);
-
-
     if (count($get_categories_product) > 0) {
         foreach ($get_categories_product as $categories_item) {
             $woo_cat_id = $categories_item->term_id;
             $category_thumbnail_id = get_woocommerce_term_meta($woo_cat_id, 'thumbnail_id', true);
             $thumbnail_image_url = wp_get_attachment_url($category_thumbnail_id);
-
             $categories_list .= '
 				<li>
 					<a href="' . esc_url(get_term_link((int)$categories_item->term_id)) . '">' . esc_html($categories_item->name) .
@@ -107,6 +84,50 @@ function get_categories_product($categories_list = '')
 			';
         }
     }
-
     return ($categories_list == '' ? '' : '<ul>' . $categories_list . '</ul>');
 }
+// отключение хлебных крошек
+add_action('init', 'true_woo_no_breadcrumbs');
+function true_woo_no_breadcrumbs()
+{
+    remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+}
+
+// переопределение шаблона wc_get_template_part для product
+add_filter('wc_get_template_part', 'custom_wc_template_part', 10, 3);
+function custom_wc_template_part($template, $slug, $name)
+{
+    $custom_template_name = 'content-product-custom.php';
+    if ($slug == 'content' && $name == 'product') {
+        $template = trailingslashit(get_stylesheet_directory()) . 'woocommerce/' . $custom_template_name;
+    }
+    return $template;
+}
+
+
+function woocommerce_set_cart_qty_action()
+{
+    global $woocommerce;
+    foreach ($_REQUEST as $key => $quantity) {
+        // only allow integer quantities
+        if (!is_numeric($quantity)) continue;
+
+        // attempt to extract product ID from query string key
+        $update_directive_bits = preg_split('/^set-cart-qty_/', $key);
+        if (count($update_directive_bits) >= 2 and is_numeric($update_directive_bits[1])) {
+            $product_id = (int) $update_directive_bits[1];
+            $cart_id = $woocommerce->cart->generate_cart_id($product_id);
+            // See if this product and its options is already in the cart
+            $cart_item_key = $woocommerce->cart->find_product_in_cart($cart_id);
+            // If cart_item_key is set, the item is already in the cart
+            if ($cart_item_key) {
+                $woocommerce->cart->set_quantity($cart_item_key, $quantity);
+            } else {
+                // Add the product to the cart 
+                $woocommerce->cart->add_to_cart($product_id, $quantity);
+            }
+        }
+    }
+}
+
+add_action('init', 'woocommerce_set_cart_qty_action');

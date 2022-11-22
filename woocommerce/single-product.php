@@ -1,6 +1,6 @@
 <?php
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
+    exit;
 }
 get_header('shop'); ?>
 <section>
@@ -8,7 +8,7 @@ get_header('shop'); ?>
     <?php while (have_posts()) : ?>
         <?php the_post(); ?>
         <?php wc_get_template_part('content', 'single-product'); ?>
-    <?php endwhile; // end of the loop. 
+    <?php endwhile;
     do_action('woocommerce_after_main_content');
     ?>
 </section>

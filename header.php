@@ -82,13 +82,17 @@
                 </div>
                 <div class="basket-btns">
                     <div class="basket-btns__bag">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Cart.png" alt="">
+                        <a href="<?php echo esc_url(wc_get_cart_url()); ?>">
+                            <img src="<?php bloginfo('template_url') ?>/assets/img/Cart.png">
+                        </a>
                     </div>
                     <div class="basket-btns__heart">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Mini_Button.png" alt="">
+                        <a href="/wishlist">
+                            <img src="<?php bloginfo('template_url') ?>/assets/img/Mini_Button.png">
+                        </a>
                     </div>
                     <div class="basket-btns__repeat">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Mini_Button_3.png" alt="">
+                        <img src="<?php bloginfo('template_url') ?>/assets/img/Mini_Button_3.png">
                     </div>
                 </div>
             </div>
