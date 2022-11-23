@@ -17,8 +17,8 @@ Template Name: Главная страница
                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
                 </p>
                 <div class="main-banner-definition__btns">
-                    <a class="main-banner-definition__cat" href="#">Каталог</a>
-                    <a class="main-banner-definition__call" href="#">Связаться с нами</a>
+                    <a class="main-banner-definition__cat" href="/shop">Каталог</a>
+                    <a class="main-banner-definition__call" href="/kontakty">Связаться с нами</a>
                 </div>
             </div>
             <div class="main-banner-pic">
@@ -571,4 +571,5 @@ Template Name: Главная страница
         </div>
     </div>
 </section>
+<script src="<?php bloginfo('template_url'); ?>/assets/js/home.js"></script>
 <?php get_footer(); ?>

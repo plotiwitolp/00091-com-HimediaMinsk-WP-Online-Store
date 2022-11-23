@@ -84,6 +84,11 @@ h1 {
   margin: 15px 0;
   font-family: "TTNorms_Regular400";
   color: #27282b;
+  font-size: 32px;
+}
+
+textarea {
+  font-family: "TTNorms_Regular400";
 }
 
 .customize-support .header {
@@ -838,10 +843,6 @@ table.woocommerce-product-attributes.shop_attributes {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 52px;
-}
-
-.about-company-desc {
-  padding-top: 51px;
 }
 
 .about-company-desc__h2 {
@@ -1609,7 +1610,6 @@ h2.contacts-info__h2 {
   font-size: 48px;
   color: #1b2430;
   position: relative;
-  padding-top: 51px;
 }
 h2.contacts-info__h2 .underline-mark {
   width: 360px;
@@ -1958,7 +1958,7 @@ section {
     height: 40px;
   }
   .about-company-desc {
-    padding-top: 5px;
+    padding-top: 20px;
   }
   .about-company-desc__h2 {
     margin-bottom: 7px;
@@ -2138,6 +2138,7 @@ section {
   }
   .contacts {
     font-size: 12px;
+    padding: 7px;
   }
   .categoriya__title,
 h2.contacts-info__h2 {
@@ -2152,5 +2153,17 @@ h2.contacts-info__h2 {
   }
   .categoriya__title .underline-mark {
     width: 207px;
+  }
+  .product-custom .product {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .product-custom .product .summary.entry-summary,
+.product-custom .product .woocommerce-product-gallery {
+    width: 100% !important;
+  }
+  .woocommerce .woocommerce-billing-fields__field-wrapper {
+    width: 100% !important;
+    font-size: 12px !important;
   }
 }
