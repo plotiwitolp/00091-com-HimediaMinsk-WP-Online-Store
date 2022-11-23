@@ -13,7 +13,7 @@ $(document).ready(function () {
       countD += 3;
       if (countD <= productsGoodsCart.length) {
         for (let i = 0; i < countD; i++) {
-          productsGoodsCart[i].style.display = 'block';
+          productsGoodsCart[i].style.display = 'flex';
         }
       }
     });

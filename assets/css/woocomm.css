@@ -271,7 +271,9 @@ a.delete_item {
 }
 .product-custom .product .summary.entry-summary .woocommerce-tabs.wc-tabs-wrapper tbody tr {
   padding-top: 10px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .product-custom .product .summary.entry-summary .woocommerce-tabs.wc-tabs-wrapper .comment_container {
   display: -webkit-box;
@@ -366,11 +368,13 @@ table .product-name a:hover {
   width: 290px !important;
 }
 
+.products-goods-cart h3,
 .woocommerce h3 {
+  margin: 10px 0 3px;
   font-size: 24px;
   color: #27282b;
-  margin: 30px 0 15px;
 }
+
 .woocommerce .woocommerce-billing-fields__field-wrapper {
   width: 75%;
   font-size: 16px;
@@ -447,4 +451,81 @@ table .product-name a:hover {
 }
 .wc_payment_methods p {
   font-size: 16px;
+}
+
+.woocommerce .star-rating::before {
+  display: none;
+}
+
+.woocommerce .products .star-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+}
+
+.woocommerce table.shop_attributes td {
+  font-style: inherit;
+  padding: 0;
+  border-top: 0;
+  border-bottom: none;
+  margin: 0;
+  line-height: inherit;
+}
+
+.woocommerce table.shop_attributes {
+  border: 0;
+  border-top: 0;
+  margin-bottom: 0;
+}
+
+.woocommerce table.shop_attributes th {
+  width: auto;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-top: 0;
+  border-bottom: 0;
+  margin: 0;
+  line-height: 20px;
+}
+
+p.return-to-shop {
+  margin-bottom: 30px;
+}
+
+.woocommerce-order {
+  font-size: 18px;
+}
+.woocommerce-order p {
+  padding: 5px 0 15px;
+}
+
+section.woocommerce-order-details h2 {
+  padding: 15px 0;
+}
+
+.woocommerce-info {
+  border-top-color: #1e85be;
+  font-size: 18px;
+}
+
+p.return-to-shop {
+  font-size: 20px;
+}
+
+div#review_form_wrapper {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+p.comment-notes {
+  padding-bottom: 20px;
+}
+
+table.woocommerce-product-attributes.shop_attributes {
+  width: 100%;
 }

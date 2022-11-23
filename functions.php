@@ -129,4 +129,9 @@ add_action('init', 'woocommerce_set_cart_qty_action');
 // 
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
-//
+// отображение звезд рейтинга
+function ww_load_dashicons()
+{
+    wp_enqueue_style('dashicons');
+}
+add_action('wp_enqueue_scripts', 'ww_load_dashicons', 999);
