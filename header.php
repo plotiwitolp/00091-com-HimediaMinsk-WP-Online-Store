@@ -19,29 +19,26 @@
                     <?php the_custom_logo(); ?>
                 </div>
                 <div class="header-top__search">
-                    <!-- id="searchform"-->
-                    <?php // get_search_form(); 
-                    ?>
                     <?php aws_get_search_form(true); ?>
                 </div>
                 <div class="header-top__socials">
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <img src="<?php bloginfo('template_url') ?>/assets/img/socials_white/akar-icons_instagram-fill.svg">
                     </a>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <img src="<?php bloginfo('template_url') ?>/assets/img/socials_white/bxl_telegram.svg">
                     </a>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <img src="<?php bloginfo('template_url') ?>/assets/img/socials_white/akar-icons_whatsapp-fill.svg">
                     </a>
                 </div>
                 <div class="header-top__phone">
                     <div class="header-top__tel">
                         <a href="tel:+73104372766">
-                            <img src="<?php bloginfo('template_url') ?>/assets/img/call-calling.svg" alt="">
+                            <img src="<?php bloginfo('template_url') ?>/assets/img/call-calling.svg">
                         </a>
                     </div>
-                    <div class="header-top__quest-num">
+                    <div class=" header-top__quest-num">
                         <span class="header-top__quest">Появились вопросы?</span>
                         <span class="header-top__num">
                             <a href="tel:+73104372766">
@@ -57,13 +54,11 @@
             <div class="header-bottom">
                 <div class="navigation">
                     <div class="navigation__catalog">
-                        <!-- открывать/скрывать navigation__cat-nav -->
                         <a class="navigation__catalog-btn" href="javascript: void(0)">
                             <img src="<?php bloginfo('template_url') ?>/assets/img/menu_open_white.svg" class="navigation__btn ">
                             <img src="<?php bloginfo('template_url') ?>/assets/img/menu_close_white.svg" class="navigation__btn navigation_active">
                         </a>
-                        <!-- на страницу каталог -->
-                        <a href="http://00091-com-himediaminsk-wp-online-store/shop/">
+                        <a href="/shop">
                             <span>Весь каталог</span>
                         </a>
                         <div class="navigation__cat-nav">

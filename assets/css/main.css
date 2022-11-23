@@ -1757,6 +1757,9 @@ section:not(.header-nav) {
   .main-banner-pic img {
     width: 90%;
   }
+  .products-goods {
+    width: 205px;
+  }
   .products-goods-cart-wrap .products {
     width: 480px;
     -webkit-column-gap: 15px;

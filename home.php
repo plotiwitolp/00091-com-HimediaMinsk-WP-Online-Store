@@ -22,7 +22,7 @@ Template Name: Главная страница
                 </div>
             </div>
             <div class="main-banner-pic">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/banner-top.png" alt="">
+                <img src="<?php echo get_field('main-banner-pic')['url']; ?>" alt="<?php echo get_field('main-banner-pic')['alt']; ?>" />
             </div>
         </div>
     </div>
@@ -253,7 +253,9 @@ Template Name: Главная страница
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </p>
             <span class="about-company-desc__btn">
-                Подробнее
+                <a href="/o-kompanii">
+                    Подробнее
+                </a>
             </span>
         </div>
         <div class="about-company-banner">
