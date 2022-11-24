@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Главная страница
+Template Name: Home
 */
 ?>
 

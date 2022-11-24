@@ -513,8 +513,10 @@ section.woocommerce-order-details h2 {
 }
 
 .woocommerce-info {
-  border-top-color: #1e85be;
   font-size: 18px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 p.return-to-shop {

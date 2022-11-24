@@ -58,7 +58,7 @@
                             <img src="<?php bloginfo('template_url') ?>/assets/img/menu_open_white.svg" class="navigation__btn ">
                             <img src="<?php bloginfo('template_url') ?>/assets/img/menu_close_white.svg" class="navigation__btn navigation_active">
                         </a>
-                        <a href="/shop">
+                        <a href="/all-cat">
                             <span>
                                 Весь каталог
                             </span>

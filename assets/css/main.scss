@@ -119,6 +119,7 @@ section {
 }
 main {
   padding-top: 151px;
+  padding-bottom: 10px;
 }
 .header-top {
   display: flex;
@@ -472,6 +473,7 @@ main {
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px #dedede;
+  height: fit-content;
 }
 .products-goods-cart__img-wrap {
   align-self: center;
@@ -507,6 +509,7 @@ main {
 .products-goods-cart__parameters {
   margin-top: 3px;
   flex: 1;
+  min-height: 240px;
 }
 .products-goods-cart__parameter-item {
   display: flex;
