@@ -22,27 +22,27 @@
                     <?php aws_get_search_form(true); ?>
                 </div>
                 <div class="header-top__socials">
-                    <a href="#" target="_blank">
+                    <a href="<?php the_field('instagram', 13) ?>" target="_blank">
                         <img src="<?php bloginfo('template_url') ?>/assets/img/socials_white/akar-icons_instagram-fill.svg">
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="<?php the_field('telegram', 13) ?>" target="_blank">
                         <img src="<?php bloginfo('template_url') ?>/assets/img/socials_white/bxl_telegram.svg">
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="<?php the_field('whatsapp', 13) ?>" target="_blank">
                         <img src="<?php bloginfo('template_url') ?>/assets/img/socials_white/akar-icons_whatsapp-fill.svg">
                     </a>
                 </div>
                 <div class="header-top__phone">
                     <div class="header-top__tel">
-                        <a href="tel:+73104372766">
+                        <a href="tel:<?php the_field('phone', 13) ?>">
                             <img src="<?php bloginfo('template_url') ?>/assets/img/call-calling.svg">
                         </a>
                     </div>
                     <div class=" header-top__quest-num">
                         <span class="header-top__quest">Появились вопросы?</span>
                         <span class="header-top__num">
-                            <a href="tel:+73104372766">
-                                310-437-2766
+                            <a href="tel:<?php the_field('phone', 13) ?>">
+                                <?php the_field('phone', 13) ?>
                             </a>
                         </span>
                     </div>
@@ -59,7 +59,9 @@
                             <img src="<?php bloginfo('template_url') ?>/assets/img/menu_close_white.svg" class="navigation__btn navigation_active">
                         </a>
                         <a href="/shop">
-                            <span>Весь каталог</span>
+                            <span>
+                                Весь каталог
+                            </span>
                         </a>
                         <div class="navigation__cat-nav">
                             <?php wp_nav_menu([

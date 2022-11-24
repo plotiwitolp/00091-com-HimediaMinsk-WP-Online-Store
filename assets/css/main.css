@@ -1161,6 +1161,7 @@ table tr:nth-child(even) {
   border-radius: 20px 0px 0px 20px;
   top: 40px;
   padding: 46px 29px 122px 35px;
+  min-height: 455px;
 }
 
 .our-contacts-info__h2 {
@@ -1236,6 +1237,7 @@ table tr:nth-child(even) {
 .contacts-map {
   border-radius: 20px;
   overflow: hidden;
+  min-height: 455px;
 }
 
 .footer {
@@ -1538,6 +1540,7 @@ table tr:nth-child(even) {
   font-family: "TTNorms_Medium500";
   -ms-flex-item-align: center;
       align-self: center;
+  float: right;
 }
 
 .form-mail-to-us form > div {
@@ -1554,6 +1557,7 @@ table tr:nth-child(even) {
   width: 100%;
   height: 115px;
   padding: 10px 20px;
+  resize: vertical;
 }
 
 span.form-mail-to-us__title {
@@ -1708,6 +1712,25 @@ span.contacts-info__desc {
   height: 100%;
 }
 
+.wpcf7 form .wpcf7-response-output {
+  margin: 20px 0;
+  padding: 10px 55px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.wpcf7-not-valid-tip {
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+span.wpcf7-form-control-wrap[data-name=your-message] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 @media (max-width: 1440px) {
   .header-top {
     -webkit-box-pack: justify;
@@ -1733,14 +1756,10 @@ section:not(.header-nav) {
   }
   .header-top__search {
     width: 260px;
-    margin-left: 20px;
   }
   .header-top__logo a {
     width: 95px;
     display: block;
-  }
-  .header-top__logo img {
-    width: 100%;
   }
   .header-top__socials {
     margin-left: 15px;

@@ -2,9 +2,11 @@
 defined('ABSPATH') || exit;
 get_header('shop');
 ?>
-<section>
-	<?php do_action('woocommerce_before_main_content'); ?>
-	<?php if (is_shop()) : ?>
+
+<?php if (is_shop()) { ?>
+
+	<!-- START ALL CATEGORIES -->
+	<section>
 		<h1 class="woocommerce-products-header__title page-title categoriya__title">
 			<span>Категории товаров</span>
 			<span class="underline-mark"></span>
@@ -12,7 +14,13 @@ get_header('shop');
 		<div class="categoriya-nav">
 			<?php echo get_categories_product(); ?>
 		</div>
-	<?php else : ?>
+	</section>
+	<!-- END ALL CATEGORIES -->
+
+<?php } else { ?>
+
+	<!-- START CATEGORY -->
+	<section>
 		<h1 class="woocommerce-products-header__title page-title categoriya__title">
 			<span><?php woocommerce_page_title(); ?></span>
 			<span class="underline-mark"></span>
@@ -26,6 +34,10 @@ get_header('shop');
 		<div class="products">
 			<div class="products-filter">
 				<span class="products-filter__title">Фильтры</span>
+				<?php
+				if (function_exists('dynamic_sidebar'))
+					dynamic_sidebar('right-sidebar');
+				?>
 				<ul class="products-filter-cat">
 					<li class="products-filter-cat__li">
 						<span class="products-filter-cat__span">Диаметр</span>
@@ -221,12 +233,10 @@ get_header('shop');
 					if (wc_get_loop_prop('total')) {
 						while (have_posts()) {
 				?>
-							<!-- <div class="products-goods-cart"> -->
 							<?php
 							the_post(); ?>
 							<?php do_action('woocommerce_shop_loop'); ?>
 							<?php wc_get_template_part('content', 'product'); ?>
-							<!-- </div> -->
 				<?php
 						}
 					}
@@ -239,6 +249,9 @@ get_header('shop');
 				?>
 			</div>
 		</div>
-	<?php endif; ?>
-</section>
+	</section>
+	<!-- END CATEGORY -->
+
+<?php } ?>
+
 <?php get_footer('shop'); ?>

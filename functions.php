@@ -135,3 +135,23 @@ function ww_load_dashicons()
     wp_enqueue_style('dashicons');
 }
 add_action('wp_enqueue_scripts', 'ww_load_dashicons', 999);
+
+
+
+// виджеты
+function register_my_sidebars()
+{
+    register_sidebar(array(
+        'name' => "Правая боковая панель сайта",
+        'id' => 'right-sidebar',
+        'description' => 'Эти виджеты будут показаны в правой колонке сайта',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
+    ));
+}
+add_action('widgets_init', 'register_my_sidebars');
+
+# Отключает редактор блоков для виджетов WordPress
+add_filter('use_widgets_block_editor', '__return_false');

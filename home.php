@@ -3,18 +3,21 @@
 Template Name: Главная страница
 */
 ?>
+
 <?php get_header(); ?>
+
+<!-- START HOME -->
 <!-- main-banner -->
 <section>
     <div class="main-banner">
         <div class="main-banner__item">
             <div class="main-banner-definition">
                 <h1 class="main-banner-definition__h1">
-                    <span>Пример заголовка УТП</span>
+                    <span><?php the_field('main-banner-definition__h1'); ?></span>
                     <span class="underline-mark"></span>
                 </h1>
                 <p class="main-banner-definition__desc">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    <?php the_field('main-banner-definition__desc'); ?>
                 </p>
                 <div class="main-banner-definition__btns">
                     <a class="main-banner-definition__cat" href="/shop">Каталог</a>
@@ -27,12 +30,15 @@ Template Name: Главная страница
         </div>
     </div>
 </section>
-
 <!-- products -->
 <section>
     <div class="products">
         <div class="products-filter">
             <span class="products-filter__title">Фильтры</span>
+            <?php
+            if (function_exists('dynamic_sidebar'))
+                dynamic_sidebar('right-sidebar');
+            ?>
             <ul class="products-filter-cat">
                 <li class="products-filter-cat__li">
                     <span class="products-filter-cat__span">Диаметр</span>
@@ -225,13 +231,15 @@ Template Name: Главная страница
             <div class="products-goods-top">
                 <span class="products-goods-top__title">Популярные товары</span>
                 <div class="products-goods-cart-wrap">
-                    <?php echo do_shortcode('[products limit="3" order="desc" orderby="price" visibility="featured"]'); ?>
+                    <?php echo do_shortcode('[products limit="3" order="asc" orderby="rating" visibility="featured"]'); ?>
                 </div>
             </div>
             <div class="products-goods-catalog">
                 <span class="products-goods-catalog__title">Каталог товаров</span>
                 <div class="products-goods-cart-wrap">
+
                     <?php echo do_shortcode('[products]'); ?>
+
                 </div>
                 <div class="products-goods-catalog__show-more">
                     <span class="products-goods-catalog__show-more-span">Загрузить еще</span>
@@ -240,55 +248,50 @@ Template Name: Главная страница
         </div>
     </div>
 </section>
-
 <!-- about-company -->
 <section>
     <div class="about-company">
         <div class="about-company-desc">
             <h2 class="about-company-desc__h2">
-                <span>О компании</span>
+                <span><?php the_field('about-company-desc__h2'); ?></span>
                 <span class="underline-mark"></span>
             </h2>
-            <p class="about-company-desc__p">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
+            <div class="about-company-desc__p">
+                <?php the_field('about-company-desc__p'); ?>
+            </div>
             <span class="about-company-desc__btn">
-                <a href="/o-kompanii">
-                    Подробнее
-                </a>
+                <a href="/o-kompanii">Подробнее</a>
             </span>
         </div>
         <div class="about-company-banner">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-banner')['url']; ?>" alt="<?php echo get_field('about-company-banner')['alt']; ?>" />
             <span class="about-company-banner__shadow"></span>
         </div>
     </div>
 </section>
-
 <!-- our-advantages -->
 <div class="our-advantages">
     <section>
         <h2 class="our-advantages__title">Наши преимущества</h2>
         <div class="our-advantages-item-wrap">
             <div class="our-advantages-item">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/shopping-cart.svg" alt="">
+                <img src="<?php bloginfo('template_url') ?>/assets/img/shopping-cart.svg">
                 <span class="our-advantages-item__title">Ассортимент</span>
-                <p class="our-advantages-item__desc">Наш ассортимент состоит из более чем 20000 позиций. Товар всегда есть в наличии и постоянно обновляется</p>
+                <div class="our-advantages-item__desc"><?php the_field('our-advantages-item__desc_1'); ?></div>
             </div>
             <div class="our-advantages-item">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/baseline-loyalty.svg" alt="">
+                <img src="<?php bloginfo('template_url') ?>/assets/img/baseline-loyalty.svg">
                 <span class="our-advantages-item__title">Лояльность</span>
-                <p class="our-advantages-item__desc">У нас есть гибкая система скидок. Сумма скидки увеличивается с каждой покупкой</p>
+                <div class="our-advantages-item__desc"><?php the_field('our-advantages-item__desc_2'); ?></div>
             </div>
             <div class="our-advantages-item">
-                <img src="<?php bloginfo('template_url') ?>/assets/img/miscellaneous-services.svg" alt="">
+                <img src="<?php bloginfo('template_url') ?>/assets/img/miscellaneous-services.svg">
                 <span class="our-advantages-item__title">Сервис</span>
-                <p class="our-advantages-item__desc">В нашей компании работает только обученный и лояльный персонал.</p>
+                <div class="our-advantages-item__desc"><?php the_field('our-advantages-item__desc_3'); ?></div>
             </div>
         </div>
     </section>
 </div>
-
 <!-- our-clients -->
 <section class="our-clients-wrap">
     <div class="our-clients">
@@ -298,88 +301,74 @@ Template Name: Главная страница
         </h2>
         <div class="our-clients-slider">
             <div class="our-clients-slider__track">
-                <div class="our-clients-slider__item">
-                    <div class="our-clients-slider__avatar">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Avatar_1.png" alt="">
-                    </div>
-                    <div class="our-clients-slider__body">
-                        <span class="our-clients-slider__body-title">Наименование</span>
-                        <span class="our-clients-slider__body-date">08.09.2022</span>
-                        <p class="our-clients-slider__body-desc">Dots provided reliable system for our food ordering company and I couldn’t be happy more</p>
-                    </div>
-                </div>
-                <div class="our-clients-slider__item">
-                    <div class="our-clients-slider__avatar">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Avatar_2.png" alt="">
-                    </div>
-                    <div class="our-clients-slider__body">
-                        <span class="our-clients-slider__body-title">Наименование</span>
-                        <span class="our-clients-slider__body-date">08.09.2022</span>
-                        <p class="our-clients-slider__body-desc">Professional, responsive, and able to keep up with ever-changing demand and tight deadlines: That's how I would describe Dots!</p>
-                    </div>
-                </div>
-                <div class="our-clients-slider__item">
-                    <div class="our-clients-slider__avatar">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Avatar_3.png" alt="">
-                    </div>
-                    <div class="our-clients-slider__body">
-                        <span class="our-clients-slider__body-title">Наименование</span>
-                        <span class="our-clients-slider__body-date">08.09.2022</span>
-                        <p class="our-clients-slider__body-desc">We have seen a notable increase in our leads since we began using their services in 2018</p>
-                    </div>
-                </div>
-                <div class="our-clients-slider__item">
-                    <div class="our-clients-slider__avatar">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/Avatar_4.png" alt="">
-                    </div>
-                    <div class="our-clients-slider__body">
-                        <span class="our-clients-slider__body-title">Наименование</span>
-                        <span class="our-clients-slider__body-date">08.09.2022</span>
-                        <p class="our-clients-slider__body-desc">Dots not only revitalized our brand, but saved our business from the brink of ruin by optimizing our website for search</p>
-                    </div>
-                </div>
+                <?php
+                $query = new WP_Query('cat=44&nopaging=1');
+                if ($query->have_posts()) {
+                    while ($query->have_posts()) {
+                        $query->the_post(); ?>
+                        <div class="our-clients-slider__item">
+                            <div class="our-clients-slider__avatar">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+                            <div class="our-clients-slider__body">
+                                <span class="our-clients-slider__body-title">
+                                    <?php the_title(); ?>
+                                </span>
+                                <span class="our-clients-slider__body-date">
+                                    <?php echo get_the_date(); ?>
+                                </span>
+                                <div class="our-clients-slider__body-desc">
+                                    <?php the_content(); ?>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                    }
+                    wp_reset_postdata();
+                } else
+                    echo 'Отзывов ещё нет.';
+                ?>
             </div>
             <div class="our-clients-slider__remote">
             </div>
         </div>
     </div>
 </section>
-
 <!-- our-contacts -->
 <section>
     <div class="our-contacts">
         <div class="our-contacts-map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A858bf867a9fd75df1eadf6406ab518ad30f9de27118daddb6ea4b9181dc588da&amp;width=100%25&amp;height=455&amp;lang=ru_RU&amp;scroll=true"></script>
+            <?php the_field('our_contacts_map'); ?>
         </div>
         <div class="our-contacts-info">
             <h2 class="our-contacts-info__h2">Наши контакты</h2>
-            <span class="our-contacts-info__desc">Свяжитесь с нами любым удобным пособом или посетите наш магазин</span>
+            <span class="our-contacts-info__desc"><?php the_field('our-contacts-info__desc', 13); ?></span>
             <div class="our-contacts-info__body">
                 <div class="our-contacts-info__item">
                     <span class="our-contacts-info__icon">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/call-calling.svg" alt="">
+                        <img src="<?php bloginfo('template_url') ?>/assets/img/call-calling.svg">
                     </span>
                     <div class="our-contacts-info__text">
                         <span class="our-contacts-info__text-title">Телефон</span>
-                        <span class="our-contacts-info__text-body">310-437-2766</span>
+                        <span class="our-contacts-info__text-body"><?php the_field('phone', 13) ?></span>
                     </div>
                 </div>
                 <div class="our-contacts-info__item">
                     <span class="our-contacts-info__icon">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/sms_big.svg" alt="">
+                        <img src="<?php bloginfo('template_url') ?>/assets/img/sms_big.svg">
                     </span>
                     <div class="our-contacts-info__text">
                         <span class="our-contacts-info__text-title">Почта</span>
-                        <span class="our-contacts-info__text-body">unreal@outlook.com</span>
+                        <span class="our-contacts-info__text-body"><?php the_field('email', 13) ?></span>
                     </div>
                 </div>
                 <div class="our-contacts-info__item">
                     <span class="our-contacts-info__icon">
-                        <img src="<?php bloginfo('template_url') ?>/assets/img/location.svg" alt="">
+                        <img src="<?php bloginfo('template_url') ?>/assets/img/location.svg">
                     </span>
                     <div class="our-contacts-info__text">
                         <span class="our-contacts-info__text-title">Адрес</span>
-                        <span class="our-contacts-info__text-body">706 Campfire Ave. Meriden, CT 06450</span>
+                        <span class="our-contacts-info__text-body"><?php the_field('address', 13) ?></span>
                     </div>
                 </div>
                 <span class="underline-mark"></span>
@@ -389,4 +378,6 @@ Template Name: Главная страница
     </div>
 </section>
 <script src="<?php bloginfo('template_url'); ?>/assets/js/home.js"></script>
+<!-- END HOME -->
+
 <?php get_footer(); ?>

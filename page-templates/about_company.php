@@ -12,58 +12,38 @@ Template Name: О компании
                 <span>О компании</span>
                 <span class="underline-mark"></span>
             </h2>
-            <p class="about-company-desc__p">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
-            <p class="about-company-desc__p">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            </p>
+            <div class="about-company-desc__p">
+                <?php the_field('about-company-desc__p'); ?>
+            </div>
         </div>
         <div class="about-company-banner">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-banner')['url']; ?>" alt="<?php echo get_field('about-company-banner')['alt']; ?>" />
             <span class="about-company-banner__shadow"></span>
         </div>
     </div>
     <div class="about-company-gallery">
         <div class="about-company-gallery__item">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-gallery__item_1')['url']; ?>" alt="<?php echo get_field('about-company-gallery__item_1')['alt']; ?>" />
         </div>
         <div class="about-company-gallery__item">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-gallery__item_2')['url']; ?>" alt="<?php echo get_field('about-company-gallery__item_2')['alt']; ?>" />
         </div>
         <div class="about-company-gallery__item">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-gallery__item_3')['url']; ?>" alt="<?php echo get_field('about-company-gallery__item_3')['alt']; ?>" />
         </div>
         <div class="about-company-gallery__item">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-gallery__item_4')['url']; ?>" alt="<?php echo get_field('about-company-gallery__item_4')['alt']; ?>" />
         </div>
         <div class="about-company-gallery__item">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-gallery__item_5')['url']; ?>" alt="<?php echo get_field('about-company-gallery__item_5')['alt']; ?>" />
         </div>
         <div class="about-company-gallery__item">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/about_company.png" alt="">
+            <img src="<?php echo get_field('about-company-gallery__item_6')['url']; ?>" alt="<?php echo get_field('about-company-gallery__item_6')['alt']; ?>" />
         </div>
     </div>
     <div class="form-mail-to-us">
         <span class="form-mail-to-us__title">Напишите нам</span>
-        <form action="">
-            <div>
-                <label for="form-mail-to-us__name">Ваше имя:*</label>
-                <input id="form-mail-to-us__name" type="text" name="name" placeholder="Ваше имя">
-            </div>
-            <div>
-                <label for="form-mail-to-us__name">Номер телефона:*</label>
-                <input id="form-mail-to-us__name" type="tel" name="number" placeholder="+7 777 77 77">
-            </div>
-            <div>
-                <label for="form-mail-to-us__name">E-mail: (необязательное поле)</label>
-                <input id="form-mail-to-us__name" type="mail" name="mail" placeholder="E-mail">
-            </div>
-            <div>
-                <textarea name="" placeholder="Ваш вопрос. (необязательное поле)"></textarea>
-            </div>
-            <input type="submit" value="Отправить">
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="179" title="Напишите нам"]'); ?>
     </div>
 </section>
 <?php get_footer(); ?>

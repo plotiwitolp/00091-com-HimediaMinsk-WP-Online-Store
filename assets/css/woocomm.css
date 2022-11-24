@@ -494,7 +494,7 @@ table .product-name a:hover {
 }
 
 .woocommerce-product-attributes-item__value p {
-  padding: 0;
+  padding: 8px 0;
 }
 
 p.return-to-shop {
