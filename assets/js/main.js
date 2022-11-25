@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  //
+  //span
   // show/hide menu & filter
   $(document).on('click', (e) => {
     //
@@ -30,15 +30,15 @@ $(document).ready(function () {
 
     // show/hide products-filter-cat
     function toggleProductsFilterCat(eventTarget) {
-      if ($(eventTarget).parents().hasClass('products-filter-cat__li')) {
-        $(eventTarget).siblings('.products-filter-sub').toggle();
+      if ($(eventTarget).hasClass('widget-title')) {
+        $(eventTarget).siblings('.woocommerce-widget-layered-nav-list').toggle();
       }
     }
     toggleProductsFilterCat(e.target);
 
     // add/remove active class products-filter-cat__li span
     function toggleProductsFilterCatLiSpan(eventTarget) {
-      if ($(eventTarget).hasClass('products-filter-cat__span')) {
+      if ($(eventTarget).hasClass('widget-title')) {
         if ($(eventTarget).hasClass('products-filter-cat__li_active')) {
           $(eventTarget).removeClass('products-filter-cat__li_active');
         } else {
@@ -48,19 +48,32 @@ $(document).ready(function () {
     }
     toggleProductsFilterCatLiSpan(e.target);
 
-    // add/remove active class products-filter-sub__li span
-    function toggleProductsFilterSubLiSpan(eventTarget) {
-      if ($(eventTarget).hasClass('products-filter-sub__span')) {
-        if ($(eventTarget).hasClass('products-filter-sub__li_active')) {
-          $(eventTarget).removeClass('products-filter-sub__li_active');
-        } else {
-          $(eventTarget).addClass('products-filter-sub__li_active');
-        }
-      }
+    if ($(e.target).hasClass('remove')) {
+      setTimeout(function () {
+        location.reload();
+      }, 1500);
     }
-    toggleProductsFilterSubLiSpan(e.target);
+    // add/remove active class products-filter-sub__li span
+    // function toggleProductsFilterSubLiSpan(eventTarget) {
+    //   if ($(eventTarget).parent().hasClass('woocommerce-widget-layered-nav-list__item')) {
+    //     if ($(eventTarget).hasClass('products-filter-sub__li_active')) {
+    //       $(eventTarget).removeClass('products-filter-sub__li_active');
+    //     } else {
+    //       $(eventTarget).addClass('products-filter-sub__li_active');
+    //     }
+    //   }
+    // }
+    // toggleProductsFilterSubLiSpan(e.target);
     //
     // end (document click)
+  });
+
+  // show/hide filter
+  $($('.woocommerce-widget-layered-nav-list')).each(function () {
+    if ($(this).children('li').hasClass('chosen')) {
+      $(this).show();
+      $(this).siblings('h2').addClass('products-filter-cat__li_active');
+    }
   });
 
   // reset filter

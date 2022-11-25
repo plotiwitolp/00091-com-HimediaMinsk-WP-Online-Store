@@ -81,11 +81,15 @@
                     <div class="basket-btns__bag">
                         <a href="<?php echo esc_url(wc_get_cart_url()); ?>">
                             <img src="<?php bloginfo('template_url') ?>/assets/img/Cart.png">
+                            <span class="cart_contents_count"><?php $count_prdcts = WC()->cart->get_cart_contents_count();
+                                                                echo $count_prdcts ?  $count_prdcts : ''; ?></span>
                         </a>
                     </div>
                     <div class="basket-btns__heart">
                         <a href="/wishlist">
                             <img src="<?php bloginfo('template_url') ?>/assets/img/Mini_Button.png">
+                            <span class="cart_contents_count"> <?php $wishlist_count = YITH_WCWL()->count_products();
+                                                                echo $wishlist_count ? $wishlist_count : ''; ?></span>
                         </a>
                     </div>
                     <div class="basket-btns__repeat">

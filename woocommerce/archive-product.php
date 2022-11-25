@@ -33,15 +33,14 @@ get_header('shop');
 	<section>
 		<div class="products">
 			<div class="products-filter">
-				<span class="products-filter__title">Фильтры</span>
+				<span class="products-filter__title">Фильтр</span>
 				<?php // echo do_shortcode('[woof]'); 
 				?>
 				<?php
 				if (function_exists('dynamic_sidebar'))
 					dynamic_sidebar('right-sidebar');
 				?>
-				<!-- <span class="products-filter__submit">Применить</span>
-				<span class="products-filter__reset">Сбросить</span> -->
+				<span class="products-filter__reset"><a href="?">Сбросить</a></span>
 			</div>
 			<div class="products-goods">
 				<div class="products-goods-top">
@@ -53,10 +52,9 @@ get_header('shop');
 				<div class="products-goods-catalog">
 					<span class="products-goods-catalog__title">Каталог товаров</span>
 					<div class="products-goods-cart-wrap">
-
-						<?php // echo do_shortcode('[products]'); 
+						<?php
+						// echo do_shortcode('[products]');
 						?>
-
 						<?php
 						if (woocommerce_product_loop()) {
 							woocommerce_product_loop_start();
@@ -64,9 +62,14 @@ get_header('shop');
 								while (have_posts()) {
 						?>
 									<?php
-									the_post(); ?>
-									<?php do_action('woocommerce_shop_loop'); ?>
-									<?php wc_get_template_part('content', 'product'); ?>
+									the_post();
+									?>
+									<?php
+									do_action('woocommerce_shop_loop');
+									?>
+									<?php
+									wc_get_template_part('content', 'product');
+									?>
 						<?php
 								}
 							}
@@ -77,7 +80,6 @@ get_header('shop');
 						}
 						// do_action('woocommerce_after_main_content');
 						?>
-
 					</div>
 					<div class="products-goods-catalog__show-more">
 						<span class="products-goods-catalog__show-more-span">Загрузить еще</span>
@@ -235,11 +237,13 @@ get_header('shop');
 		<div class="products">
 			<div class="products-filter">
 				<span class="products-filter__title">Фильтр</span>
-				<?php echo do_shortcode('[woof]'); ?>
-				<?php
-				// if (function_exists('dynamic_sidebar'))
-				// 	dynamic_sidebar('right-sidebar');
+				<?php // echo do_shortcode('[woof]'); 
 				?>
+				<?php
+				if (function_exists('dynamic_sidebar'))
+					dynamic_sidebar('right-sidebar');
+				?>
+				<span class="products-filter__reset"><a href="?">Сбросить</a></span>
 			</div>
 			<div class="products-goods-cart-wrap">
 				<?php
