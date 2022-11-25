@@ -2,9 +2,7 @@
 defined('ABSPATH') || exit;
 get_header('shop');
 ?>
-
 <?php if (is_shop()) { ?>
-
 	<!-- START HOME -->
 	<!-- main-banner -->
 	<section>
@@ -34,8 +32,6 @@ get_header('shop');
 		<div class="products">
 			<div class="products-filter">
 				<span class="products-filter__title">Фильтр</span>
-				<?php // echo do_shortcode('[woof]'); 
-				?>
 				<?php
 				if (function_exists('dynamic_sidebar'))
 					dynamic_sidebar('right-sidebar');
@@ -52,9 +48,6 @@ get_header('shop');
 				<div class="products-goods-catalog">
 					<span class="products-goods-catalog__title">Каталог товаров</span>
 					<div class="products-goods-cart-wrap">
-						<?php
-						// echo do_shortcode('[products]');
-						?>
 						<?php
 						if (woocommerce_product_loop()) {
 							woocommerce_product_loop_start();
@@ -78,7 +71,6 @@ get_header('shop');
 						} else {
 							do_action('woocommerce_no_products_found');
 						}
-						// do_action('woocommerce_after_main_content');
 						?>
 					</div>
 					<div class="products-goods-catalog__show-more">
@@ -219,9 +211,7 @@ get_header('shop');
 	</section>
 	<script src="<?php bloginfo('template_url'); ?>/assets/js/home.js"></script>
 	<!-- END HOME -->
-
 <?php } else { ?>
-
 	<!-- START CATEGORY -->
 	<section>
 		<h1 class="woocommerce-products-header__title page-title categoriya__title">
@@ -237,8 +227,6 @@ get_header('shop');
 		<div class="products">
 			<div class="products-filter">
 				<span class="products-filter__title">Фильтр</span>
-				<?php // echo do_shortcode('[woof]'); 
-				?>
 				<?php
 				if (function_exists('dynamic_sidebar'))
 					dynamic_sidebar('right-sidebar');
@@ -270,7 +258,5 @@ get_header('shop');
 		</div>
 	</section>
 	<!-- END CATEGORY -->
-
 <?php } ?>
-
 <?php get_footer('shop'); ?>

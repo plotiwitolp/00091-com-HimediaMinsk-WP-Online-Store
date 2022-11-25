@@ -6,20 +6,23 @@ $(document).ready(function () {
     for (let i = 3; i < productsGoodsCart.length; i++) {
       productsGoodsCart[i].style.display = 'none';
     }
-
-    let countD = 3;
+    const countCustom = 3;
+    let countD = countCustom;
     productsShowMore.addEventListener('click', function () {
       const productsGoodsCart = document.querySelectorAll('.products-goods-catalog .products-goods-cart');
-      countD += 3;
+      countD += countCustom;
       if (countD <= productsGoodsCart.length) {
         for (let i = 0; i < countD; i++) {
           productsGoodsCart[i].style.display = 'flex';
+        }
+      } else {
+        for (let i = productsGoodsCart.length; i > countD - countCustom; i--) {
+          productsGoodsCart[i - 1].style.display = 'flex';
         }
       }
     });
   }
   doShowMore();
-
   // our clients slider
   function doClientsSlider() {
     $('.our-clients-slider__track').slick({

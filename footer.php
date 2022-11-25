@@ -35,10 +35,10 @@
                 <div class="footer-top-right__desc">
                     <?php the_field('footer-top-right__desc', 13); ?>
                 </div>
-                <form class="subscribe-form" action="">
-                    <input type="email" name="subscribe-form-email" id="" placeholder="Ваш Email">
-                    <input type="submit" value="Подписаться">
-                </form>
+                <?php
+                if (function_exists('dynamic_sidebar'))
+                    dynamic_sidebar('bottom-sidebar');
+                ?>
             </div>
         </div>
     </section>

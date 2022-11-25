@@ -384,14 +384,8 @@ main {
           box-shadow: 0 0 7px rgba(255, 255, 255, 0.3098039216);
 }
 
-.basket-btns__bag {
-  cursor: pointer;
-}
-
-.basket-btns__heart {
-  cursor: pointer;
-}
-
+.basket-btns__bag,
+.basket-btns__heart,
 .basket-btns__repeat {
   cursor: pointer;
 }
@@ -1816,6 +1810,86 @@ span.wpcf7-form-control-wrap[data-name=your-message] {
   gap: 10px;
 }
 
+#mailpoet_form_1 form.mailpoet_form {
+  padding: 0 !important;
+}
+
+#mailpoet_form_1 .mailpoet_paragraph {
+  line-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#mailpoet_form_1 form {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #343538;
+  border-radius: 5px;
+}
+
+#mailpoet_form_1 form.mailpoet_form {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mailpoet_form_1 .mailpoet_paragraph {
+  width: 100%;
+}
+
+.mailpoet_paragraph input[type=email] {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  height: 36px;
+  background-color: inherit;
+  padding-left: 25px;
+  text-indent: 21px;
+  color: #fff;
+  font-family: "TTNorms_Regular400";
+  font-size: 14px;
+}
+
+.mailpoet_paragraph input[type=submit] {
+  width: 170px !important;
+  height: 36px;
+  background: #537ce6;
+  border-radius: 5px;
+  padding: 0 15px;
+  color: #fff;
+  font-family: "TTNorms_Medium500";
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+#mailpoet_form_1 .mailpoet_paragraph.last {
+  display: contents;
+}
+
+#mailpoet_form_1 .mailpoet_message {
+  padding: 3px !important;
+}
+
+.parsley-errors-list {
+  position: absolute;
+}
+
+.mailpoet_form.mailpoet_form_successfully_send .mailpoet_validate_success {
+  background-color: rgba(0, 0, 0, 0.5882352941);
+  padding: 10px;
+  border-radius: 10px;
+  color: #c3c3c3;
+}
+
+.page_404 {
+  text-align: center;
+}
+
 @media (max-width: 1440px) {
   .header-top {
     -webkit-box-pack: justify;
@@ -2285,5 +2359,12 @@ h2.contacts-info__h2 {
   .woocommerce .woocommerce-billing-fields__field-wrapper {
     width: 100% !important;
     font-size: 12px !important;
+  }
+  .footer-top,
+.footer-bottom {
+    padding: 0;
+  }
+  .our-contacts-info {
+    min-height: 0;
   }
 }

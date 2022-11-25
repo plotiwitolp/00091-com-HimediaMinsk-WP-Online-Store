@@ -3,7 +3,6 @@
 Template Name: О компании
 */
 ?>
-
 <?php get_header(); ?>
 <section>
     <div class="about-company">

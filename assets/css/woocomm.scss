@@ -59,7 +59,6 @@ form.woocommerce-ordering {
   justify-content: space-between;
   align-items: center;
 }
-
 .woocommerce-error::before,
 .woocommerce-info::before,
 .woocommerce-message::before {
@@ -94,7 +93,6 @@ a.delete_item {
 .woocommerce ul.products::before {
   display: none;
 }
-
 // product card
 .product-custom {
   padding: 15px 10px;
@@ -304,7 +302,6 @@ table {
 .place-order .wp-element-button {
   width: 290px !important;
 }
-
 .products-goods-cart h3,
 .woocommerce h3 {
   margin: 10px 0 3px;

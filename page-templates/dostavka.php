@@ -3,7 +3,6 @@
 Template Name: Доставка
 */
 ?>
-
 <?php get_header(); ?>
 <section>
     <div class="about-company">

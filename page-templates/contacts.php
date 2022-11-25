@@ -3,7 +3,6 @@
 Template Name: Контакты
 */
 ?>
-
 <?php get_header(); ?>
 <section>
     <div class="contacts">
@@ -77,7 +76,6 @@ Template Name: Контакты
                 </div>
                 <span class="underline-mark"></span>
             </div>
-
         </div>
         <div class="contacts-map">
             <?php the_field('our_contacts_map', 13); ?>
